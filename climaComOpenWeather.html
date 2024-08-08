@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicativo do Tempo</title>
+    <!-- Link para o arquivo CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gupter:wght@400;500;700&display=swap" rel="stylesheet">
+
+     <!-- Font Awesome-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="weather-app">
+        <h1>Aplicativo do Tempo</h1>
+        <!-- Formulário para entrada da cidade -->
+        <form id="weather-form">
+            <input type="text" id="city" placeholder="Digite o nome da cidade" required> <!-- Obrigatório --> 
+            <button type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                Obter Clima
+            </button>
+        </form>
+        <!-- Div para exibir os dados do clima atual -->
+        <div id="weather-data" class="hidden">
+            <h2>
+                <!--Consumindo API de bandeiras de paises-->
+                <i class="fa-solid fa-location-dot"></i>
+                <span id="city-name"></span>
+            </h2>
+            <p id="temperature"></p>
+            <div id="description-container">
+                <p id="description"></p>
+                <!-- <img src="" alt="" id="wather-icon"> -->
+                <img id="weather-icon" alt="Weather icon"> 
+            </div>
+            <div id="details-container">
+                <p>
+                    <i class="fa-solid fa-droplet"></i>
+                    <span id="humidity"></span>
+                </p>
+                <p>
+                    <i class="fa-solid fa-wind"></i>
+                    <span id="wind"></span>
+                </p>
+            </div>
+            <!-- <p id="description"></p> -->
+            <!-- <img id="weather-icon" alt="Weather icon">  -->
+        </div>
+        <!-- Div para exibir a previsão de cinco dias -->
+        <div id="forecast" class="hidden">
+            <h3>Previsão de 5 dias</h3>
+            <div id="forecast-data"></div>
+        </div>
+    </div>
+    <!-- Link para o arquivo JavaScript -->
+    <script src="climaTempo.js"></script>
+</body>
+</html>
